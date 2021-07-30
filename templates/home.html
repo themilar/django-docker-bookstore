@@ -5,13 +5,12 @@
 <h1>Homepage</h1>
 <img src="{% static 'images/cover1.jpg' %}" alt="image1" class="cover" width="10px" height="120">
 {% if user.is_authenticated %}
-Hi {{user.email}}
-<p><a href="{% url 'logout' %}">Log Out</a></p>
+<p>Hi {{user.email}} <a href="{% url 'account_logout' %}">Log Out</a></p>
 {% else %}
 <p>
     you're not logged in
 </p>
-<a href="{% url 'login'%}">Log In</a>
-<a href="{% url 'signup' %}">Sign Up</a>
+<a href="{% url 'account_login'%}">Log In</a>
+<a href="{% url 'account_signup' %}">Sign Up</a>
 {% endif %}
 {% endblock content %}

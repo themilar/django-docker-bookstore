@@ -20,15 +20,17 @@ from django.urls import path, include
 urlpatterns = [
     # django admin
     path('admin/', admin.site.urls),
+
     # overriding django auth defaults
     # path(
     #     route='accounts/login/',
     #     view=LoginView.as_view(template_name='login'),
     #     name='login'
     # ),
+
     # user management
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('allauth.urls')),
+    
     # local apps
-    path('accounts/', include('users.urls')),
     path('', include('pages.urls', namespace='page')),
 ]

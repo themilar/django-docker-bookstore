@@ -5,3 +5,6 @@ h1{
     height: 300px;
     width: 200px;
 }
+nav > a{
+    text-shadow: 2px 2px 5px brown;
+}
