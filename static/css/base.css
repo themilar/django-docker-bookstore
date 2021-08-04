@@ -5,6 +5,8 @@ h1{
     height: 300px;
     width: 200px;
 }
-nav > a{
-    text-shadow: 2px 2px 5px brown;
+nav > a:hover{
+    text-shadow: 2px 2px 5px blue;
+    text-decoration:none;
+    border-bottom:1px red solid;
 }
