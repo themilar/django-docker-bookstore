@@ -33,4 +33,5 @@ urlpatterns = [
     
     # local apps
     path('', include('pages.urls', namespace='page')),
+    path('books/',include('books.urls'))
 ]
