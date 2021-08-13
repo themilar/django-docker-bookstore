@@ -169,3 +169,6 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_FORMS = {'login':'users.forms.CustomUserLogin'}
 LOGIN_REDIRECT_URL = 'pages:home'
 ACCOUNT_LOGOUT_REDIRECT = 'pages:home'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT=str(os.path.join(BASE_DIR,'media'))
