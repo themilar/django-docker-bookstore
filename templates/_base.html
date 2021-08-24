@@ -27,6 +27,9 @@
                 <a class="btn btn-outline-primary" href="{% url 'account_signup' %}">Sign Up</a>
                 {% endif %}
             </nav>
+            <form action="{% url 'search_results' %}" class="form-inline mt-2 mt-md-0" method="GET">
+                <input type="text" name="q" class="form-control mr-sm-2" aria-label="Search" placeholder='Search'>
+            </form>
         </div>
     </header>
     <div class="container">
