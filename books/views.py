@@ -22,6 +22,6 @@ class SearchListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        queryset = Book.objects.filter(
-            Q(title__icontains=query) | Q(author__icontains=query))
-        return queryset
+        return (queryset := Book.objects.filter(
+            Q(title__icontains=query) | Q(author__icontains=query)))
+        
