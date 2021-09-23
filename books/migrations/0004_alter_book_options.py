@@ -12,6 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='book',
-            options={'permissions': [('special status', 'Can read all books')]},
+            options={'permissions': [
+                ('special status', 'Can read all books')]},
         ),
     ]

@@ -25,3 +25,4 @@ class SearchListView(ListView):
         queryset = Book.objects.filter(
             Q(title__icontains=query) | Q(author__icontains=query))
         return queryset
+ #😊  😊  😊  😊  😊  😊  😊  😊😊 
