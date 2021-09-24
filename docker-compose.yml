@@ -5,8 +5,14 @@ services:
     build: .
     command: python /Web/manage.py runserver 0.0.0.0:8000
     environment:
-      - SECRET_KEY=qr(24s_-b+q@#9&dxo=j0j&*#cfs5_nmn&)7k)tg8ka6b!9uu^
-      - DEBUG=1
+      - "SECRET_KEY=qr(24s_-b+q@#9&dxo=j0j&*#cfs5_nmn&)7k)tg8ka6b!9uu^"
+      - "DEBUG=1"
+      - "SECURE_SSL_REDIRECT=False"
+      - "SECURE_HSTS_SECONDS=0"
+      - "SECURE_HSTS_INCLUDE_SUBDOMAINS=False"
+      - "SECURE_HSTS_PRELOAD=False"
+      - "SESSION_COOKIE_SECURE=False"
+      - "CSRF_COOKIE_SECURE=False"
     volumes:
       - .:/Web
     ports:

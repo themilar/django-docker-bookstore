@@ -21,7 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # django admin
-    path('admin/', admin.site.urls),
+    path('notadmin/', admin.site.urls),
 
     # overriding django auth defaults
     # path(

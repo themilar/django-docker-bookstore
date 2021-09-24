@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', default=0)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','*',]
 
 
 # Application definition
@@ -180,3 +180,10 @@ hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [
     ip[:-1]+"1" for ip in ips
 ]
+
+SECURE_SSL_REDIRECT=os.environ.get("SECURE_SSL_REDIRECT",default="True")
+SECURE_HSTS_SECONDS = os.environ.get("SECURE_HSTS_SECONDS",default=2592000)
+SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get("SECURE_HSTS_INCLUDE_SUBDOMAINS",default=True)
+SECURE_HSTS_PRELOAD=os.environ.get("SECURE_HSTS_PRELOAD",default=True)
+SESSION_COOKIE_SECURE=os.environ.get("SESSION_COOKIE_SECURE",default=True)
+CSRF_COOKIE_SECURE=os.environ.get("CSRF_COOKIE_SECURE",default=True)
